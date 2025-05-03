@@ -1,0 +1,181 @@
+:root{
+    --color-monster:#a8d530;
+    --color-tail:#ff4f51;
+    --color-horns:#ff4f51;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#a8d530;
+}
+.wrapper{
+    width:500px;
+    max-width: 600px;
+    height:700px;
+    padding:30px 0;
+    background-color: antiquewhite;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:10px;
+}
+.buttons{
+    width:90%;
+    position: relative;
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+    padding:20px 0 40px 0;
+    border-bottom: 2px dotted black;
+}
+button{
+    font-family: "Poppins", sans-serif;
+    padding:10px 30px;
+    background-color: greenyellow;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    transition:background-color 0.5s ease;
+}
+@keyframes tada{
+    0%{
+        transform:scale(1);
+    }
+    10%,20%{
+        transform:scale(0.9) rotate(-3deg);
+    }
+    30%,50%,70%,90%{
+        transform:scale(1.1) rotate(3deg);
+    }
+    40%,60%,80%{
+        transform:scale(1.1) rotate(-3deg);
+    }
+    100%{
+        transform:scale(1)rotate(0deg);
+    }
+}
+button:hover{
+    background-color: burlywood;
+    animation: tada 1s ease-in-out ;
+}
+.container{
+    position: relative;
+    width: 400px;
+  height: 600px;
+  /* overflow: visible; */
+}
+#monster{
+    /* overflow: visible; */
+    position:relative;
+    width:310px;
+    height:500px;
+    margin: auto;
+}
+.monster-body{
+    position:absolute;
+    width:200px;
+    height: 300px;
+    background-color: var(--color-monster);
+    margin:auto;
+    left:0;
+    right: 0;
+    top:80px;
+}
+.monster-body::before{
+    content:"";
+    position: absolute;
+    width:270px;
+    height:50px;
+    background-color:var(--color-monster);
+    top:90px;
+    margin:auto;
+    left:-35px;
+    border-radius: 12px;
+}
+
+.monster-horns {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 70px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+    pointer-events: none;
+    /* overflow: hidden;avoid any interaction issues */
+}
+
+.horn {
+    width: 0px;
+    height: 0px;
+    background-color: var(--color-horns);
+    border-radius: 50% 50% 0 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 10px solid var(--color-horns);
+
+}
+
+.left-horn {
+    transform: rotate(60deg);
+}
+
+.right-horn {
+    transform: rotate(-60deg);
+}
+
+.monster-foot-left,
+.monster-foot-right {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background-color: var(--color-monster);
+    border-radius: 0 0 10px 10px;
+    top: 375px;
+}
+.monster-foot-left {
+    left: 70px;
+}
+.monster-foot-right {
+    left: 200px;
+}
+
+.monster-tail{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    border-radius: 0 0 20px 0;
+    border:5px solid var(--color-tail);
+    border-top: none;
+    border-left: none;
+    top:260px;
+    left:247px;
+    transform: rotate(-15deg);
+    overflow: visible;
+}
+.monster-tail::before{
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-bottom: 20px solid var(--color-tail);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    left:25px;
+    top:-9px;
+}
+img{
+    position: relative;
+    top:90px;
+    left:47px;
+}
+#download-btn{
+    position: relative;
+    left:160px;
+}

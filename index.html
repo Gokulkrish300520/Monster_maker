@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="funny-and-scary-303753.mp3" type="audio/mpeg">
+    </audio>
+    <div class="wrapper">
+        <div class="buttons">
+            <button class="face-btn">Face</button>
+            <button class="color-btn">Color</button>
+            <button class="horns-btn">Horns</button>
+            <button class="tail-btn">Tail</button>
+        </div>
+        <div id="container">
+            <div id="monster">
+                <div class="monster-horns"></div>
+                <div class="monster-horns">
+                    <div class="horn left-horn">
+                    </div>
+                    <div class="horn right-horn">
+                    </div>
+                </div>
+                
+                <div class="monster-head"></div>
+                <div class="monster-body" ></div>
+                    <img id="face" src="images/face-0.png" alt="monster-face">
+                <div class="monster-tail"></div>
+                <div class="monster-foot-left"></div>
+                <div class="monster-foot-right"></div>
+
+            </div>
+        </div>
+        <button  id="download-btn">Download Sticker</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
